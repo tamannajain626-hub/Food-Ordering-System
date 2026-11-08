@@ -1,0 +1,43 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Eclipse / VS Code ###
+.apt_generated
+.classpath
+.project
+.settings
+bin/
+.vscode/
+
+### OS ###
+.DS_Store
+
+### Local secret files (your MySQL password should never be committed) ###
+.env
+application-local.properties
+
+# Sensitive files
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.jks
+
+# Generated files
+target/
+BOOT-INF/
+node_modules/
+*.log
+.DS_Store
+
+# Local database/session data
+FoodOrdering.session.sql

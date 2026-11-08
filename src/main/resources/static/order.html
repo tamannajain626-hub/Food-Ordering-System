@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order - Food Ordering System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+<body class="menu-page">
+
+<div class="page menu-page">
+
+    <header class="header">
+        <div class="brand">
+            <span class="brand-mark">FC</span>
+            <div class="brand-text">
+                <h1>Food Ordering</h1>
+                <p class="subtitle">Restaurant &amp; Kitchen</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Register Customer</a>
+            <a href="customers.html" class="nav-link">View Customers</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="order.html" class="nav-link active">Place Order</a>
+            <a href="orders.html" class="nav-link">Orders</a>
+        </nav>
+    </header>
+
+    <section class="hero order-hero">
+        <p class="eyebrow">Place your order</p>
+        <h2>Build &amp; Confirm</h2>
+        <p class="hero-text">
+            Select a registered customer, choose dishes from the live menu, adjust quantities, and place the order.
+            Totals are calculated on the backend using database prices.
+        </p>
+        <div class="hero-stats">
+            <div class="stat">
+                <strong id="statCustomers">0</strong>
+                <span>Registered customers</span>
+            </div>
+            <div class="stat">
+                <strong id="statMenu">0</strong>
+                <span>Dishes on menu</span>
+            </div>
+            <div class="stat">
+                <strong id="statItems">0</strong>
+                <span>Items in order</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="menu-layout order-layout">
+
+        <section class="menu-content">
+
+            <div class="section-head">
+                <h3>Select customer</h3>
+            </div>
+            <div class="card order-card">
+                <label for="customerSelect" class="order-label">Registered customer</label>
+                <select id="customerSelect" class="order-select">
+                    <option value="">Loading customers...</option>
+                </select>
+                <p class="hint">Only customers from the <code>customer</code> table are shown.</p>
+            </div>
+
+            <div class="section-head" style="margin-top: 24px;">
+                <h3>Choose dishes</h3>
+                <span class="section-count" id="orderMenuCount"></span>
+            </div>
+            <div class="filter-bar" id="orderCategoryFilters"></div>
+            <div id="orderMessage" class="message hidden"></div>
+            <div class="menu-grid" id="orderMenuGrid"></div>
+            <p class="menu-empty hidden" id="orderMenuEmpty">No dishes in this category.</p>
+
+        </section>
+
+        <aside class="cart-panel" id="orderCartPanel">
+            <div class="cart-head">
+                <h3>Order Summary</h3>
+                <button type="button" class="link-button" id="orderClearButton">Clear all</button>
+            </div>
+            <div class="cart-items" id="orderCartItems"></div>
+            <p class="cart-empty" id="orderCartEmpty">Add dishes to build your order.</p>
+            <div class="cart-foot">
+                <div class="subtotal">
+                    <span>Order total</span>
+                    <strong id="orderTotal">₹0.00</strong>
+                </div>
+                <button type="button" class="order-place-btn" id="placeOrderBtn" disabled>Place Order</button>
+                <p class="cart-note">Totals are computed on the backend from database prices.</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        <p>Phase 3 &mdash; Order Placement (Spring Boot + MySQL)</p>
+    </footer>
+
+</div>
+
+<div class="cart-bar hidden" id="orderCartBar">
+    <div class="cart-bar-info">
+        <span class="cart-bar-count" id="orderCartBarCount">0 items</span>
+        <strong id="orderCartBarTotal">₹0.00</strong>
+    </div>
+    <button type="button" class="cart-bar-button" id="orderCartBarButton">Review order</button>
+</div>
+
+<script src="js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Food Ordering System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+<body class="menu-page">
+
+<div class="page menu-page">
+
+    <header class="header">
+        <div class="brand">
+            <span class="brand-mark">FC</span>
+            <div class="brand-text">
+                <h1>Food Ordering</h1>
+                <p class="subtitle">Restaurant &amp; Kitchen</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Register Customer</a>
+            <a href="customers.html" class="nav-link">View Customers</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="order.html" class="nav-link">Place Order</a>
+            <a href="orders.html" class="nav-link active">Orders</a>
+        </nav>
+    </header>
+
+    <section class="hero order-hero">
+        <p class="eyebrow">Order history</p>
+        <h2>Saved Orders</h2>
+        <p class="hero-text">
+            Every placed order is stored in MySQL with customer details, items, quantities, prices at ordering time, total amount, status, and creation time.
+        </p>
+        <div class="hero-stats">
+            <div class="stat">
+                <strong id="ordersCount">0</strong>
+                <span>Total orders</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="orders-main">
+        <div id="ordersMessage" class="message hidden"></div>
+        <div class="orders-list" id="ordersList"></div>
+        <p class="menu-empty hidden" id="ordersEmpty">No orders placed yet. <a href="order.html">Place your first order</a>.</p>
+    </main>
+
+    <footer class="footer">
+        <p>Phase 3 &mdash; Order Placement (Spring Boot + MySQL)</p>
+    </footer>
+
+</div>
+
+<script src="js/orders.js"></script>
+</body>
+</html>

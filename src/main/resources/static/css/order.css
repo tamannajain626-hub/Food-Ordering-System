@@ -1,0 +1,166 @@
+/* ============================================================
+   Food Ordering System - order placement styles
+   ============================================================ */
+
+.order-hero {
+    background:
+        linear-gradient(120deg, rgba(27, 22, 19, .97) 0%, rgba(52, 36, 24, .95) 55%, rgba(110, 72, 26, .93) 100%);
+}
+
+.order-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 20px;
+    margin-bottom: 10px;
+}
+
+.order-label {
+    display: block;
+    font-weight: 600;
+    font-size: .92rem;
+    margin-bottom: 8px;
+    color: var(--ink);
+}
+
+.order-select {
+    width: 100%;
+    padding: 11px 13px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    font-family: inherit;
+    font-size: .95rem;
+    background: var(--white);
+}
+
+.order-select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184, 134, 47, .14);
+}
+
+.order-layout {
+    grid-template-columns: minmax(0, 1fr) 370px;
+}
+
+.order-place-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background .18s ease;
+}
+
+.order-place-btn:hover:not(:disabled) {
+    background: var(--gold-deep);
+}
+
+.order-place-btn:disabled {
+    background: #cfc7ba;
+    cursor: not-allowed;
+}
+
+.orders-main {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.orders-list {
+    display: grid;
+    gap: 18px;
+}
+
+.order-card-full {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.order-card-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 18px 22px;
+    background: linear-gradient(180deg, rgba(251, 248, 243, .9), rgba(255, 255, 255, 1));
+    border-bottom: 1px solid var(--line);
+}
+
+.order-card-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-card-title strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.order-card-meta {
+    font-size: .88rem;
+    color: var(--ink-soft);
+}
+
+.order-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--cream-deep);
+    color: var(--ink);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-items-table th,
+.order-items-table td {
+    padding: 12px 22px;
+    text-align: left;
+    border-bottom: 1px solid var(--cream-deep);
+}
+
+.order-items-table th {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink-soft);
+    background: rgba(251, 248, 243, .7);
+}
+
+.order-items-table td:last-child,
+.order-items-table th:last-child {
+    text-align: right;
+}
+
+.order-card-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    padding: 14px 22px;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .order-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

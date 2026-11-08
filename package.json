@@ -1,0 +1,12 @@
+{
+  "name": "food-ordering",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Food Ordering System - Java Spring Boot + Maven backend",
+  "scripts": {
+    "dev": "bash -c 'set -a && [ -f .env ] && . ./.env || true && set +a && mvn spring-boot:run'",
+    "start": "bash -c 'set -a && [ -f .env ] && . ./.env || true && set +a && mvn spring-boot:run'",
+    "build": "mvn -B clean package",
+    "test": "mvn -B test"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Customers - Food Ordering System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page">
+
+    <header class="header">
+        <h1>Food Ordering System</h1>
+        <p class="subtitle">Registered Customers</p>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Register Customer</a>
+            <a href="customers.html" class="nav-link active">View Customers</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="order.html" class="nav-link">Place Order</a>
+            <a href="orders.html" class="nav-link">Orders</a>
+        </nav>
+    </header>
+
+    <main class="card">
+
+        <div class="list-header">
+            <h2>All customers in the database</h2>
+            <button type="button" id="refreshButton" class="secondary-button">Refresh</button>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <p class="hint" id="countText">Loading...</p>
+
+        <div class="table-wrapper">
+            <table id="customersTable">
+                <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                </thead>
+                <tbody id="customersTableBody">
+                <!-- rows are added here by customers.js -->
+                </tbody>
+            </table>
+        </div>
+
+        <p class="empty hidden" id="emptyText">
+            No customers registered yet.
+            <a href="index.html">Register the first one</a>.
+        </p>
+
+    </main>
+
+    <footer class="footer">
+        <p>Phase 1 &mdash; Spring Boot + MySQL (RDBMS mini project)</p>
+    </footer>
+
+</div>
+
+<script src="js/customers.js"></script>
+</body>
+</html>
